@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Личный кабинет - Банк Ансария</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Банк Ансария</h1>
+    <nav>
+      <a href="index.html">Главная</a>
+      <a href="login.html">Войти</a>
+      <a href="services.html">Услуги</a>
+      <a href="dashboard.html" class="active">Личный кабинет</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2 class="text-center">Личный кабинет</h2>
+
+    <!-- Счета -->
+    <section class="accounts-section">
+      <h3>Ваши счета</h3>
+      <div class="accounts-grid">
+        <div class="account-card">
+          <h4>Основной счёт</h4>
+          <p>Баланс: <span class="balance">100 000 ₽</span></p>
+        </div>
+        <div class="account-card">
+          <h4>Накопительный счёт</h4>
+          <p>Баланс: <span class="balance">50 000 ₽</span></p>
+        </div>
+        <div class="account-card">
+          <h4>Кредитный счёт</h4>
+          <p>Баланс: <span class="balance">-20 000 ₽</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Форма перевода -->
+    <section class="transfer-section">
+      <h3>Перевод между счетами</h3>
+      <form class="transfer-form">
+        <label>
+          Отправить со счёта:
+          <select name="fromAccount">
+            <option value="account1">Основной счёт (100 000 ₽)</option>
+            <option value="account2">Накопительный счёт (50 000 ₽)</option>
+          </select>
+        </label>
+        <br />
+        <label>
+          Получатель:
+          <select name="toAccount">
+            <option value="account2">Накопительный счёт</option>
+            <option value="account3">Кредитный счёт</option>
+          </select>
+        </label>
+        <br />
+        <label>
+          Сумма:
+          <input type="number" name="amount" placeholder="Введите сумму" required />
+        </label>
+        <br />
+        <button type="submit">Перевести</button>
+      </form>
+    </section>
+
+    <!-- История операций -->
+    <section class="history-section">
+      <h3>История операций</h3>
+      <table class="history-table">
+        <thead>
+          <tr>
+            <th>Дата</th>
+            <th>Описание</th>
+            <th>Сумма</th>
+            <th>Баланс</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>2023-10-01</td>
+            <td>Пополнение счёта</td>
+            <td>+10 000 ₽</td>
+            <td>100 000 ₽</td>
+          </tr>
+          <tr>
+            <td>2023-10-02</td>
+            <td>Перевод на телефон</td>
+            <td>-5 000 ₽</td>
+            <td>95 000 ₽</td>
+          </tr>
+          <tr>
+            <td>2023-10-03</td>
+            <td>Платеж за интернет</td>
+            <td>-1 500 ₽</td>
+            <td>93 500 ₽</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Банк Ансария. Все права защищены.</p>
+  </footer>
+
+</body>
+</html>
